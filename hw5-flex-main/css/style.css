@@ -1,0 +1,64 @@
+@keyframes mymove {
+    from {top: 25px; opacity: 0;}
+    to {top: 475px; opacity: 1}
+  }
+
+  /* Code we got from the GSI Steps 7 & 8
+  .card{
+    flex-basis: 450px;
+    flex-flow: row wrap; 
+    justify-content: center;
+  } */
+
+
+  @media screen and (min-width:900px){
+     /* Step 11 */
+  header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+.nav_links{
+    flex-direction: row;
+}
+
+/* Step 12 */
+.card{
+    flex-basis: 275px
+}
+.pricing{
+    align-items: center;
+}
+  }
+
+  @media screen and (min-width: 1200px){
+    
+  }
+
+  @media all and (prefers-reduced-motion: reduce) {
+    .card {
+      animation: none;
+    }
+  }
+
+  @media print{
+
+  }
+
+  /* Step 11 */
+  header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+.nav_links{
+    flex-direction: row;
+}
+
+/* Step 12 */
+.card{
+    flex-basis: 275px
+}
+.pricing{
+    align-items: center;
+}
