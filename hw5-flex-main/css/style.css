@@ -1,0 +1,181 @@
+/*defines the the logo a transition effect */
+@keyframes logoTransition {
+    from {width: 25px; opacity: 0;}
+    to {width: 475px; opacity: 1}
+  }
+  /*Then actually applies the logo transition effect step 1*/
+#logo {
+    animation: logoTransition 5s;
+    animation-fill-mode: forwards
+
+  }
+
+  /* Step 2  defines the background and text */
+  body{
+    font-family: Poppins, serif;
+    background-color: #f1f1f1;
+    background-image:url(../images/concrete_seamless.png);
+
+  }
+/* Step 3 defines the flex properties for the header elements */
+  header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+/* Step 4 defines the flex properties for the nav links */
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Step 5 defines the color of the navigation links */
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: blue;
+}
+
+/* Step 6 defines the styling defintions for children of the direct card class  */
+.card > header {
+  background-color: #288088;
+  border: 2px solid #45adad;
+  padding: 20px 0;
+  border-radius: 50px 50px 0 0
+}
+
+/* step 6 removes the border radius from the card class */
+.card{
+  border-radius: 50px 50px 0 0
+}
+
+
+
+  /* Steps 7 Code we got from the GSI, defines the flex properties for the card class*/
+  .card{
+    flex-basis: 450px;
+    flex-flow: row wrap; 
+    justify-content: center;
+    min-width: 550px;
+    
+  } 
+  /* Steps 8 defines the flex properties for the pricing class */
+  .pricing{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+/* Step 9 defines the flex properties for the images within  the gallery class */
+.gallery > img{
+  border: solid 10px #50C7C7;
+  margin: 10px;
+  width: 300px;
+}
+/* Step 10 defines the flex properties for the gallery class */
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Step 11 defining the flex properties for screens larger than 900px*/
+  @media screen and (min-width:900px){
+    
+  /* formats the header so the image is in the appropriate place  (given by the gsi)*/
+  header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  /* formats the nav links so they are in a row (given by the gsi) */
+.nav_links{
+    flex-direction: row;
+
+}
+
+/* Step 12 defining the flex properties for the cards (given by the gsi) */
+.card{
+    flex-basis: 275px;
+    flex-direction: row;
+    min-width:  275px;
+
+}
+/* Step 12 defining the flex properties for the pricing, I chaged the flex direction */  
+.pricing{
+    align-items: center;
+    flex-direction: row;
+    min-width: 250px;
+}
+  
+/* Step 13 defining properties to keep header aviailable on the screen */
+body > header {
+  position: sticky;
+  top: 0;
+}
+  }
+
+  /* Step 14 defining properties for redueced motion */
+  @media all and (prefers-reduced-motion: reduce) {
+    .card {
+      animation: none;
+    }
+  }
+
+  /* Step 15-16 defining the print settings and removing the background */
+  @media print{
+    body{
+      font-family: Arial, Helvetica;
+      background-image: none;
+    }
+    /*Step 17 changes the flex direction of the nav links */
+    nav {
+      align-self: stretch;
+  }
+    .nav_links{
+      flex-direction: row;
+      justify-content: space-around;
+    
+    }
+
+    /*Step 18 changes the flex direction of the pricing */
+    .pricing{
+      flex-direction: row;
+      flex-basis: 325px;
+      align-items: flex-end;
+      
+    }
+    /*Step 19 changes the border color of the card also removes the min width */
+    .card{
+      border: solid 2px #45ADDD;
+      flex-basis: 325px;
+      min-width: 0px;
+    }
+    /*Step 20 gets rid of the contents of gallery */ 
+    .gallery {
+      display: none;
+      
+  }
+    /*Step 20 gets rid of the word of gallery */ 
+     #gallery {
+    display: none;
+  }
+  /*Step 21 adds the thumbs up to the print preview of the card */
+  .card li:nth-of-type(2)::after {
+    content: '👍';
+}
+  } 
+
+
+
+  
+
